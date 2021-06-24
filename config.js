@@ -1,5 +1,7 @@
 /** Common config for bookstore. */
+require("dotenv").config();
 
+const CFG_PORT = 3000;
 
 let DB_URI = `postgresql://`;
 
@@ -10,4 +12,7 @@ if (process.env.NODE_ENV === "test") {
 }
 
 
-module.exports = { DB_URI };
+module.exports = {
+  CFG_PORT
+  , DB_URI
+};

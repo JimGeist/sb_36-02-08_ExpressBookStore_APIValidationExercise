@@ -1,8 +1,8 @@
 /** Server for bookstore. */
 
-
 const app = require("./app");
+const { CFG_PORT } = require("./config");
 
-app.listen(3000, () => {
-  console.log(`Server starting on port 3000`);
+app.listen(CFG_PORT, () => {
+  console.log(`${(new Date()).toISOString()}: Server listening on port ${CFG_PORT}.`);
 });
